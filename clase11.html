@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+                --white: #FFFFFF;
+                --black: #000000;
+                --dark: #232830;
+                --very-light-pink: #C7C7C7;
+                --text-input-field: #F7F7F7;
+                --hospital-green: #ACD9B2;  
+                --sm: 1.4rem;
+                --md: 1.6rem;
+                --lg: 1.8rem; 
+            }
+
+        html{
+            font-size: 62.5%;
+        }
+        
+        body{
+           font-family: 'Quicksand', sans-serif; 
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            align-items: center;
+            border-bottom: solid 1px var(--text-input-field);
+            padding-bottom: 15px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        .logo{
+            width: 100px;
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+
+        .navbar-left{
+            display: flex;
+        }
+
+        .navbar-right{
+            display: flex;
+        }
+
+        .navbar-left ul{
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        .navbar-left ul li{
+            margin-right: 8px;
+        }
+
+        .navbar-left ul li:nth-child(6){
+            margin-right: 0;
+        }
+
+        .navbar-left ul li a{
+            text-decoration: none;
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            border: solid 1px var(--white);
+            padding: 10px;
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .navbar-left ul li a:hover{
+            color: var(--hospital-green);
+            border: solid 1px var(--hospital-green);
+        }
+
+        .navbar-right li{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navbar-right li:nth-child(1){
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            padding-right: 12px;
+        }
+
+        .navbar-shopping-cart{
+            position: relative;
+        }
+
+        .navbar-shopping-cart div{
+            width: 13px;
+            height: 13px;
+            background: var(--hospital-green);
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media(max-width: 640px){
+            .menu{
+                display: block;
+            }
+
+            .navbar-left ul{
+                display: none;
+            }
+
+            .navbar-right li:nth-child(1){
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./css/images/Platzi_YardSale_Icons/icon_menu.svg" alt="menu" class="menu">
+
+        <div class="navbar-left">
+            <img src="./css/images/Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+            <ul>
+                <li>
+                    <a href="">All</a>
+                </li>
+
+                <li>
+                    <a href="">Clothes</a>
+                </li>
+
+                <li>
+                    <a href="">Electronics</a>
+                </li>
+
+                <li>
+                    <a href="">Furniture</a>
+                </li>
+
+                <li>
+                    <a href="">Toys</a>
+                </li>
+
+                <li>
+                    <a href="">Others</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <li>JosephStalin@gmail.com</li>
+            <li class="navbar-shopping-cart">
+                <img src="./css/images/Platzi_YardSale_Icons/icon_shopping_cart.svg" alt="">
+                <div>2</div>
+            </li>
+        </div>
+    </nav>
+</body>
+</html>
